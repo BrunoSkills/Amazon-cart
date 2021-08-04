@@ -11,7 +11,7 @@ Make sure you have these three things installed
 
 
 TODO(Together): Create your first ReactJS App
-Use the tutorial HERE
+Use the tutorial <a href="https://reactjs.org/docs/add-react-to-a-website.html">HERE</a>
 
 TODO(Together): Start the Amazon Cart App
 TODO: Create the Header using JSX
