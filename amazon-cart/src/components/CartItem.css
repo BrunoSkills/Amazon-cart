@@ -1,62 +1,64 @@
 .CartItem {
-    display: flex;
-    border-bottom: 1px solid #DDD;
-    padding: 10px 0;
+  display: flex;
+  border-bottom: 1px solid #DDD;
+  padding: 10px 0;
+}
+  .CartItem-Image {
+    width: 180px;
+    height: 180px;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
-    .CartItem-Image {
-      width: 180px;
-      height: 180px;
-      display: flex;
-    }
-    
-   .CartItem-Image img {
-      object-fit: center;
-      width: 100%;
-    }
-    .CartItem-Info {
-     flex-grow: 1;
-     padding-left: 10px;
   
-    }
-   .Info-title {
-     font-size: 1rem;
-     font-weight: 600;
-     margin: 0;
-     color: #007185;
-   }
-   .Info-stock {
-     margin-top: 4px;
-     color: #007600;
-   }
-   
-   .Item-actions {
-     margin-top: 5px;
-     display: flex;
-     align-items: center;
-     
-   }
-   .Item-Quantity .Quantity {
-     padding: 7px;
-     background-color: #F0F2F2;
-     border: none;
-     border-radius: 7px;
-     box-shadow: 0 2px 8px 0 rgba(15,17,17,0.15);
-   }
-   .Quantity:focus {
-     outline: none;
-   }
-  .Item-actions-divider {
-    color: #DDDDDD;
-    margin: 0 10px;
-    font-weight: bold;
+ .CartItem-Image img {
+    object-fit: contain;
+    width: 100%;
   }
-   .Item-delete {
-     color: #007185;
-   }
-   .Item-delete:hover {
-    text-decoration: underline;
-   }
-   .CartItem-Price {
-     font-size: 1rem;
-     font-weight: 700;
-   } 
+  .CartItem-Info {
+   flex-grow: 1;
+   margin-left: 10px;
+
+  }
+ .Info-title {
+   font-size: 1rem;
+   font-weight: 600;
+   margin: 0;
+   color: #007185;
+ }
+ .Info-stock {
+   margin-top: 4px;
+   color: #007600;
+ }
+ 
+ .Item-actions {
+   margin-top: 5px;
+   display: flex;
+   align-items: center;
+   
+ }
+ .Item-Quantity .Quantity {
+   padding: 7px;
+   background-color: #F0F2F2;
+   border: none;
+   border-radius: 7px;
+   box-shadow: 0 2px 8px 0 rgba(15,17,17,0.15);
+ }
+ .Quantity:focus {
+   outline: none;
+ }
+.Item-actions-divider {
+  color: #DDDDDD;
+  margin: 0 10px;
+  font-weight: bold;
+}
+ .Item-delete {
+   color: #007185;
+ }
+ .Item-delete:hover {
+  text-decoration: underline;
+ }
+ .CartItem-Price {
+   font-size: 1rem;
+   font-weight: 700;
+   margin-left: 10px;
+ } 

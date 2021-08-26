@@ -1,5 +1,32 @@
 .CartTotal {
-    height: 200px;
-    flex: 0.30;
-    background-color: #ffff;
-  }
+  /* height: 200px; */
+  flex: 0.30;
+  background-color: #ffff;
+  padding: 20px;
+  text-align: left;
+  min-width: 300px;
+}
+h3 {
+  /* display: flex; */
+  margin: 12px;
+}
+
+h3 .CartTotal-price {
+  margin-left: 8px;
+}
+button {
+background-color: #f0c14b;
+margin-bottom: 0;
+width: 100%;
+font-size: 16px;
+border: 2px solid #a88734;
+border-radius: 4px;
+padding: 4px 8px;
+cursor: pointer;
+}
+button:hover {
+background-color: #ddb347;
+}
+button:focus {
+outline: none;
+}

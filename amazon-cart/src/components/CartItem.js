@@ -1,29 +1,34 @@
 import React from 'react'
 import  './CartItem.css'
 
-function CartItem() {
+function CartItem({ item, changeItemQuantity, index, deleteItem }) {
     return (
         <div className="CartItem">
              <div className="CartItem-Image">
-                  <img src="https://images.unsplash.com/photo-1560699980-9dee78d1e874?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXBwbGUlMjBwaG9uZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" className=""></img>
+                  <img src={process.env.PUBLIC_URL + '/items/' + item.image} alt="Apple Iphone" className=""></img>
              </div>
              <div className="CartItem-Info">
-                   <div className="Info-title">Apple New version</div>
-                   <div className="Info-stock">In Stock</div> 
+                   <div className="Info-title" >{ item.title }</div>
+                   <div className="Info-stock">{ item.stock }</div> 
                    <div className="Item-actions" >
                       <div className="Item-Quantity">
-                          <select name="select" className="Quantity">
+                          <select 
+                          onChange={(e)=>changeItemQuantity(e,index)}  name="select" className="Quantity" value={ item.quantity }>
                              <option value="1">Qty: 1</option>
                              <option value="2">Qty: 2</option>    
                              <option value="3">Qty: 3</option>    
-                             <option value="4">Qty: 4</option>    
+                             <option value="4">Qty: 4</option> 
+                             <option value="5">Qty: 5</option>
+                             <option value="6">Qty: 6</option>    
+
+
                           </select>
                       </div> 
                       <div className="Item-actions-divider">|</div>
-                      <div className="Item-delete">Delete</div>
+                      <div className="Item-delete" onClick={deleteItem.bind(this,index)}>Delete</div>
                    </div>
              </div>
-             <div className="CartItem-Price">$399.00</div>
+             <div className="CartItem-Price">${ item.price }</div>
         </div>
     )
 }
